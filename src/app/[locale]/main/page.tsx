@@ -1,23 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+'use client'
 
-const MainHomePage = async (
-  props: {
-    params: Promise<{ locale: string }>;
-  }
-) => {
-  const params = await props.params;
+import { Button } from '@/components/ui/button'
+import { useTranslations } from 'next-intl'
 
-  const {
-    locale
-  } = params;
+export default function MainHomePage() {
+  const t = useTranslations()
 
-  setRequestLocale(locale);
-  const t = await getTranslations();
-
-  return (
-      <Button>{t("home")}</Button>
-  );
-};
-
-export default MainHomePage;
+  return <Button>{t('home')}</Button>
+}

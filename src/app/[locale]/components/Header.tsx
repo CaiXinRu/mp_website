@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Menubar,
   MenubarContent,
@@ -6,11 +8,11 @@ import {
   MenubarSeparator,
   MenubarTrigger,
 } from '@/components/ui/menubar'
-import { getTranslations } from 'next-intl/server'
+import { useTranslations } from 'next-intl'
 import LocaleSwitcher from './LocalSwitcher'
 
-export default async function MainHeader() {
-  const t = await getTranslations()
+export default function MainHeader() {
+  const t = useTranslations()
   return (
     <Menubar className='mb-5'>
       <div className='flex px-4 items-center w-full flex-start'>
