@@ -8,6 +8,7 @@ import {
   MenubarSeparator,
   MenubarTrigger,
 } from '@/components/ui/menubar'
+import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import LocaleSwitcher from './LocalSwitcher'
 
@@ -18,7 +19,9 @@ export default function MainHeader() {
       <div className='flex px-4 items-center w-full flex-start'>
         <span className='text-red-600 mr-4 text-base'>{t('web-title')}</span>
         <MenubarMenu>
-          <MenubarTrigger>{t('home')}</MenubarTrigger>
+          <MenubarTrigger>
+            <Link href={'/'}>{t('home')}</Link>
+          </MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger>{t('product')}</MenubarTrigger>

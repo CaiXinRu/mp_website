@@ -9,8 +9,7 @@ export default function NotFound() {
     <div>
       <h1>{t('not-found-title')}</h1>
       <Button variant='link'>
-        <Link href={'/'}></Link>
-        {t('not-found-return')}
+        <Link href={'/'}>{t('not-found-return')}</Link>
       </Button>
     </div>
   )
