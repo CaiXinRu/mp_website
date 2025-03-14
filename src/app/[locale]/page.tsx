@@ -2,7 +2,6 @@ import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
-import TestPage from './hooks/test'
 
 export default function MainHomePage({
   params,
@@ -17,7 +16,6 @@ export default function MainHomePage({
   return (
     <div>
       <Button>{t('home')}</Button>
-      <TestPage />
     </div>
   )
 }
