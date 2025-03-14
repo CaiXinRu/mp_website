@@ -10,9 +10,9 @@ export default function MainHomePage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = use(params)
-  const t = useTranslations()
-
   setRequestLocale(locale)
+
+  const t = useTranslations()
 
   return (
     <div>

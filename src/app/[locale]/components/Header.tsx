@@ -26,9 +26,13 @@ export default function MainHeader() {
         <MenubarMenu>
           <MenubarTrigger>{t('product')}</MenubarTrigger>
           <MenubarContent>
-            <MenubarItem>{t('e-payment')}</MenubarItem>
+            <MenubarItem>
+              <Link href={'/product/e-payment'}>{t('e-payment')}</Link>
+            </MenubarItem>
             <MenubarSeparator />
-            <MenubarItem>{t('smart-device')}</MenubarItem>
+            <MenubarItem>
+              <Link href={'/product/smart-device'}>{t('smart-device')}</Link>
+            </MenubarItem>
             <MenubarSeparator />
             <MenubarItem>{t('smart-manufacturing')}</MenubarItem>
           </MenubarContent>

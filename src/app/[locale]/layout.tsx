@@ -32,13 +32,13 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+  setRequestLocale(locale)
+
   if (!routing.locales.includes(locale as any)) {
     notFound()
   }
 
   const messages = await getMessages()
-
-  setRequestLocale(locale)
 
   return (
     <html lang={locale}>
