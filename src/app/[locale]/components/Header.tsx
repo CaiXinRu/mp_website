@@ -65,6 +65,11 @@ export default function MainHeader() {
             <MenubarItem>{t('company_partner')}</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
+        <MenubarMenu>
+          <MenubarTrigger>
+            <Link href={'/contact-us-zod'}>聯絡我們Zod</Link>
+          </MenubarTrigger>
+        </MenubarMenu>
       </div>
       <LocaleSwitcher />
     </Menubar>

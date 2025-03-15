@@ -16,5 +16,11 @@
   "vision-and-mission": "使命願景",
   "brand": "品牌故事",
   "history": "發展歷程",
-  "company_partner": "合作夥伴"
+  "company_partner": "合作夥伴",
+  "nameRequired": "名稱是必填的",
+  "phoneRequired": "電話號碼是必填的",
+  "validEmail": "請輸入有效的電子郵件",
+  "selectRequestType": "請選擇需求類型",
+  "selectSource": "請至少選擇一個資訊來源",
+  "contentRequired": "內容是必填的"
 }
