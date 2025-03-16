@@ -70,6 +70,11 @@ export default function MainHeader() {
             <Link href={'/contact-us-zod'}>聯絡我們Zod</Link>
           </MenubarTrigger>
         </MenubarMenu>
+        <MenubarMenu>
+          <MenubarTrigger>
+            <Link href={'/contact-us-yup'}>聯絡我們Yup</Link>
+          </MenubarTrigger>
+        </MenubarMenu>
       </div>
       <LocaleSwitcher />
     </Menubar>
