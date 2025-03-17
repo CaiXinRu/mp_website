@@ -18,6 +18,7 @@
   "history": "History",
   "company_partner": "Company Partner",
   "contact-us-zod": "Contact Zod",
+  "contact-us-yup": "Contact yup",
   "nameRequired": "Name is required",
   "phoneRequired": "Phone number is required",
   "validEmail": "Please enter a valid email",

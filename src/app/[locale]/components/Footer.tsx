@@ -13,6 +13,9 @@ export default function Footer() {
         <Link href={'/contact-us-zod'}>
           <Button variant='link'>{t('contact-us-zod')}</Button>
         </Link>
+        <Link href={'/contact-us-yup'}>
+          <Button variant='link'>{t('contact-us-yup')}</Button>
+        </Link>
       </div>
     </Menubar>
   )
