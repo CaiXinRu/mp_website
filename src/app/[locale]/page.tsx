@@ -14,8 +14,18 @@ export default function MainHomePage({
   const t = useTranslations()
 
   return (
-    <div>
-      <Button>{t('home')}</Button>
+    <div className='grid grid-cols-2'>
+      <div>
+        <Button>{t('home')}</Button>
+      </div>
+      <div className='flex flex-col items-end gap-4'>
+        <a href='/spanish.pdf' download>
+          <Button>PDF</Button>
+        </a>
+        <a href='/front_target.csv' download>
+          <Button>CSV</Button>
+        </a>
+      </div>
     </div>
   )
 }
