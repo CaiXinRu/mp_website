@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
-import { useTranslations } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
+import { BreadcrumbGlobal } from './components/Breadcrumb'
 
 export default function MainHomePage({
   params,
@@ -11,13 +11,9 @@ export default function MainHomePage({
   const { locale } = use(params)
   setRequestLocale(locale)
 
-  const t = useTranslations()
-
   return (
-    <div className='grid grid-cols-2'>
-      <div>
-        <Button>{t('home')}</Button>
-      </div>
+    <>
+      <BreadcrumbGlobal />
       <div className='flex flex-col items-end gap-4'>
         <a href='/spanish.pdf' download>
           <Button>PDF</Button>
@@ -26,6 +22,6 @@ export default function MainHomePage({
           <Button>CSV</Button>
         </a>
       </div>
-    </div>
+    </>
   )
 }

@@ -1,6 +1,5 @@
 'use client'
 import { Button } from '@/components/ui/button'
-// import "@locale/style/f2e-localswitcher.css";
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 

@@ -1,5 +1,6 @@
 'use client'
 
+import LocaleSwitcher from '@/components/global/LocalSwitcher'
 import {
   Menubar,
   MenubarContent,
@@ -10,7 +11,6 @@ import {
 } from '@/components/ui/menubar'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
-import LocaleSwitcher from './LocalSwitcher'
 
 export default function Header() {
   const t = useTranslations()
