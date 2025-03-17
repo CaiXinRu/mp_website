@@ -45,10 +45,14 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
-          <div className='max-w-3xl h-dvh my-5 mx-auto flex flex-col'>
-            <Header />
+          <div className='max-w-3xl min-h-screen py-5 mx-auto flex flex-col'>
+            <div>
+              <Header />
+            </div>
             <div className='flex-1'>{children}</div>
-            <Footer />
+            <div>
+              <Footer />
+            </div>
           </div>
         </NextIntlClientProvider>
       </body>
