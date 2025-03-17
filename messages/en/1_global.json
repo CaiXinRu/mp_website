@@ -16,5 +16,12 @@
   "vision-and-mission": "Vision And Mission",
   "brand": "Brand",
   "history": "History",
-  "company_partner": "Company Partner"
+  "company_partner": "Company Partner",
+  "contact-us-zod": "Contact Zod",
+  "nameRequired": "Name is required",
+  "phoneRequired": "Phone number is required",
+  "validEmail": "Please enter a valid email",
+  "selectRequestType": "Please select a request type",
+  "selectSource": "Please select at least one source of information",
+  "contentRequired": "Content is required"
 }

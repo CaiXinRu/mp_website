@@ -12,7 +12,7 @@ import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import LocaleSwitcher from './LocalSwitcher'
 
-export default function MainHeader() {
+export default function Header() {
   const t = useTranslations()
   return (
     <Menubar className='mb-5'>

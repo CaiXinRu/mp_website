@@ -7,6 +7,7 @@ import {
 } from 'next-intl/server'
 import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import './globals.css'
 
@@ -44,9 +45,10 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
-          <div className='max-w-3xl h-screen my-5 mx-auto'>
+          <div className='max-w-3xl h-dvh my-5 mx-auto flex flex-col'>
             <Header />
-            {children}
+            <div className='flex-1'>{children}</div>
+            <Footer />
           </div>
         </NextIntlClientProvider>
       </body>
