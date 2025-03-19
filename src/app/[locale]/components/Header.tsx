@@ -26,13 +26,13 @@ export default function Header() {
         <MenubarMenu>
           <MenubarTrigger>{t('product')}</MenubarTrigger>
           <MenubarContent>
-            <MenubarItem>
-              <Link href={'/product/e-payment'}>{t('e-payment')}</Link>
-            </MenubarItem>
+            <Link href={'/product/e-payment'}>
+              <MenubarItem>{t('e-payment')} </MenubarItem>
+            </Link>
             <MenubarSeparator />
-            <MenubarItem>
-              <Link href={'/product/smart-device'}>{t('smart-device')}</Link>
-            </MenubarItem>
+            <Link href={'/product/smart-device'}>
+              <MenubarItem>{t('smart-device')} </MenubarItem>
+            </Link>
             <MenubarSeparator />
             <MenubarItem>{t('smart-manufacturing')}</MenubarItem>
           </MenubarContent>
