@@ -14,7 +14,7 @@ export default function MainHomePage({
   return (
     <>
       <BreadcrumbGlobal />
-      <div className='flex flex-col items-end gap-4'>
+      <div className='flex justify-end mb-5 items-end gap-4'>
         <a href='/spanish.pdf' download>
           <Button>PDF</Button>
         </a>
@@ -22,6 +22,7 @@ export default function MainHomePage({
           <Button>CSV</Button>
         </a>
       </div>
+      <img src='https://picsum.photos/800/600' />
     </>
   )
 }
