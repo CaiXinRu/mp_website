@@ -24,5 +24,6 @@
   "validEmail": "請輸入有效的電子郵件",
   "selectRequestType": "請選擇需求類型",
   "selectSource": "請至少選擇一個資訊來源",
-  "contentRequired": "內容是必填的"
+  "contentRequired": "內容是必填的",
+  "user-info": "用戶資訊"
 }

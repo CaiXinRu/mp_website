@@ -24,5 +24,6 @@
   "validEmail": "Please enter a valid email",
   "selectRequestType": "Please select a request type",
   "selectSource": "Please select at least one source of information",
-  "contentRequired": "Content is required"
+  "contentRequired": "Content is required",
+  "user-info": "User Info"
 }
