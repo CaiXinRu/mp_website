@@ -1,8 +1,11 @@
+import { auth } from '@/auth'
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 import createMiddleware from 'next-intl/middleware'
-import { NextRequest } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { routing } from './i18n/routing'
+
+const protectedRoutes = ["/en/user-info", "/zh/user-info"]
 
 function getLocale(request: NextRequest): string | undefined {
   const negotiatorHeaders: Record<string, string> = {}
@@ -21,9 +24,24 @@ function getLocale(request: NextRequest): string | undefined {
   return locale
 }
 
-export default function middleware(request: NextRequest) {
+export default async function middleware(request: NextRequest) { 
+  let session;
+  try {
+    session = await auth();
+  } catch (error) {
+    console.error("Auth error:", error);
+    return NextResponse.redirect(new URL('/api/auth/signin', request.url));
+  }
+
   const locale = getLocale(request)
-  const defaultLocale = locale === 'zh' || locale === 'zh-TW' ? 'zh' : 'en'
+  const defaultLocale = locale?.startsWith('zh') ? 'zh' : 'en'
+
+  const { pathname } = request.nextUrl
+  const isProtected = protectedRoutes.some((route) => pathname.startsWith(route))
+
+  if (isProtected && !session) {
+    return NextResponse.redirect(new URL('/api/auth/signin', request.url))
+  }
 
   return createMiddleware({
     ...routing,
