@@ -2,6 +2,7 @@ import { BreadcrumbGlobal } from '@/app/[locale]/components/Breadcrumb'
 import { auth } from '@/auth'
 import { Button } from '@/components/ui/button'
 import { getTranslations } from 'next-intl/server'
+import Image from 'next/image'
 
 export default async function UserInfoPage() {
   const t = await getTranslations()
@@ -14,7 +15,7 @@ export default async function UserInfoPage() {
       <div className='mt-5'>
         <h1>MAKEING IT BETTER.</h1>
         {session?.user?.image && (
-          <img
+          <Image
             src={session?.user?.image}
             width={48}
             height={48}

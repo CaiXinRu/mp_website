@@ -7,6 +7,7 @@ import { auth } from '@/auth'
 import { Button } from '@/components/ui/button'
 import { Link } from '@/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
+import Image from 'next/image'
 
 export default async function MainHomePage() {
   const session = await auth()
@@ -28,7 +29,7 @@ export default async function MainHomePage() {
           <SignInButton />
         </div>
       )}
-      <img src='https://picsum.photos/800/600' />
+      <Image src='https://picsum.photos/800/600' alt={''} />
       <div className='flex justify-end mt-5 items-end gap-4'>
         <a href='/spanish.pdf' download>
           <Button>PDF</Button>
