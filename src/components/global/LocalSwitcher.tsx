@@ -1,5 +1,6 @@
+'use client' 
+
 import { Button } from '@/components/ui/button'
-import { setLocaleCookie } from '@/lib/actions/auth'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -22,7 +23,7 @@ export default function LocaleSwitcher() {
     <ul className='flex space-x-1'>
       {languages.map(({ key, label }) => (
         <li key={key}>
-          <Link href={redirectedPathName(key)} onClick={async()=>await setLocaleCookie(key)}>
+          <Link href={redirectedPathName(key)}>
             <Button variant='link'>{label}</Button>
           </Link>
         </li>
