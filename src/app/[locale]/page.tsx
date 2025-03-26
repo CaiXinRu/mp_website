@@ -29,7 +29,8 @@ export default async function MainHomePage() {
           <SignInButton />
         </div>
       )}
-      <Image src='https://picsum.photos/800/600' alt={''} />
+      <Image src='https://picsum.photos/800/600' width={800}
+            height={600} alt={''} />
       <div className='flex justify-end mt-5 items-end gap-4'>
         <a href='/spanish.pdf' download>
           <Button>PDF</Button>
