@@ -6,8 +6,10 @@ const nextConfig: NextConfig = {
     remotePatterns: [{
       protocol: 'https',
       hostname: 'picsum.photos',
-    }],
-    domains: ['avatars.githubusercontent.com'],
+    },{
+      protocol: 'https',
+      hostname: 'avatars.githubusercontent.com',
+    },],
   },
 }
 
