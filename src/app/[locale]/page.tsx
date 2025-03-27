@@ -1,8 +1,8 @@
 'use server'
 
 import { BreadcrumbGlobal } from '@/app/[locale]/components/Breadcrumb'
-import { SignInButton } from '@/app/[locale]/components/sign-in-button'
-import { SignOutButton } from '@/app/[locale]/components/sign-out-button'
+import { SignInButton } from '@/app/[locale]/components/SignInButton'
+import { SignOutButton } from '@/app/[locale]/components/SignOutButton'
 import { auth } from '@/auth'
 import { Button } from '@/components/ui/button'
 import { Link } from '@/i18n/navigation'
